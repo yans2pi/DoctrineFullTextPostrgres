@@ -67,7 +67,7 @@ class TsVector extends Type
 
 	public function convertToDatabaseValue($value, AbstractPlatform $platform)
 	{
-		return $value['data'];
+		return !empty($value['data']) ? $value['data'] : $value;
 	}
 
 	/**
